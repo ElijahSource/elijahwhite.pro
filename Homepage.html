@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Elijah White</title>
+	<style>
+		body {
+		  margin: 10px;
+		  background-color: #000;
+		  background-image: url('keyboard.png')
+		}
+		
+		.card {
+			/* Add shadows to create the "card" effect */
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+			transition: 0.3s;
+			}
+
+			/* On mouse-over, add a deeper shadow */
+			.card:hover {
+			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+			}
+
+			/* Add some padding inside the card container */
+			.container {
+			padding: 2px 16px;
+			}
+		.wrapper {
+			display: grid;
+			grid-gap: 5px;
+			grid-template-columns: [col] 1fr [col] 1fr [col] 1fr [col] 1fr  ;
+			grid-template-rows: [row] 25px [row] 100px [row] 100px [row] 100px;
+			background-color: #000;
+			color: #444;
+		  }
+
+		  .box {
+			background-color: #444;
+			color: #fff;
+			border-radius: 2px;
+			padding: 5px;
+			font-size: 150%;
+
+		  }
+
+		  .a {
+			grid-column: col / span 3;
+			grid-row: row ;
+			font-size: 100%;
+			color: #222;
+		  }
+		  .b {
+			grid-column: col 3 / span 2 ;
+			grid-row: row ;
+		  }
+		  .c {
+			grid-column: col ;
+			grid-row: row 2 ;
+		  }
+		  .d {
+			grid-column: col 2 / span 3 ;
+			grid-row: row 2 ;
+		  }
+
+		  .e {
+			grid-column: col / span 4;
+			grid-row: row 3;
+		  }
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+	  <div class="box a">Elijah White</div>
+	  <div class="box b">B</div>
+	  <div class="box c">C</div>
+	  <div class="box d">D</div>
+	  <div class="box e">E</div>
+	</div>
+
+	<div class="card">
+		<img src="adam.png" alt="Avatar" style="width:100%">
+		<div class="container">
+		  <h4><b>John Doe</b></h4>
+		  <p>Architect & Engineer</p>
+		</div>
+	</div>
+
+</body>

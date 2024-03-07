@@ -1,0 +1,22 @@
+Homepage:
+Leads to other pages, gives introduction to self, links to other projects and professional social pages
+https://javascript.plainenglish.io/20-header-design-html-for-website-c5cd71af6401 second example 
+
+Interactive resume:
+    "click on any project or experience youd like for further information"
+    Grid 1, top:
+        Top page bar leading to other things
+    Grid 2:
+        education
+    Grid 3:
+        education experience
+    Grid 4:
+        work experience
+    Grid 5:
+        personal projects
+    Grid 6:    
+        skills
+
+Past projects:
+1x1 homepage bar at top
+3x4 youtube thumbnail style
