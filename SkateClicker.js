@@ -5,10 +5,13 @@ var offset = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 var properties = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var idleClickRate = 0;
 var intervalID = window.setInterval(myCallback, 500);
+var skateAudio = new Audio("skate_sound.wav");
+var purchaseAudio = new Audio("purchase.mp3");
 //set elements
 var notification = document.getElementsByClassName("text notification");
 function buttonClick() {
-    var clickScore = Math.trunc(score += clickRate); //score refresh on each button click
+    skateAudio.play();
+    var clickScore = (score += clickRate) | 0; //score refresh on each button click
     updateScore(clickScore);
 }
 function Purchase(clickPrice, clickIncrease, purchaseID, idleStatus) {
@@ -18,6 +21,7 @@ function Purchase(clickPrice, clickIncrease, purchaseID, idleStatus) {
     if (score >= price) {
         score = score - price; //subtract money for purchase
         updateScore(score); //update score text
+        purchaseAudio.play();
         if (idleStatus == false) { //if purchase id greater than 10 then it is idle upgrade
             clickRate = (clickRate + clickIncrease); //upgrade
             document.getElementById('clickrate').innerHTML = clickRate.toString(); //update clickrate text
